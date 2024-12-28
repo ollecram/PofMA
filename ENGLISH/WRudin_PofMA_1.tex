@@ -145,6 +145,125 @@ We have shown that $\alpha \in L$ but $\beta \notin L$ if $\beta > \alpha$. In o
 
 \section*{FIELDS}
 
+\subsection*{1.12 Definition}
+A \tit{field} is a set $\F$ with two operations, called \tit{addition} and \tit{multiplication}, which satisfy the following so-called \quotes{field axioms} (A), (M), and (D):
+
+\subsection*{(A)  Axioms for addition}
+\begin{itemize}
+\item[] (A1) If $x \in \F$ and $y \in F$, then their sum $x + y$ is in $\F$.
+\item[] (A2) Addition is commutative: $x + y = y + x$ for all $x, y \in \F$. 
+\item[] (A3) Addition is associative: $(x + y) + z = x + (y + z)$ for all $x, y, z \in \F$.
+\item[] (A4) $\F$ contains an element $0$ such that $0 + x = x$ for every $x \in \F$. 
+\item[] (A5) To every $x \in \F$ corresponds an element $-x \in \F$ such that $$x + (-x) = 0\,.$$
+\end{itemize}
+
+\subsection*{(M)  Axioms for multiplication}
+\begin{itemize}
+\item[] (M1) If $x \in \F$ and $y \in \F$, then their product $xy$ is in $\F$.
+\item[] (M2) Multiplication is commutative: $xy = yx$ for all $x, y \in \F$.
+\item[] (M3) Multiplication is associative: $(xy)z = x(yz)$ for all $x, y, z \in \F$.
+\item[] (M4) $\F$ contains an element $1$ such that $1\,x = x$ for every $x \in \F$
+\item[] (M5) If $x \in \F$ and $x \neq 0$ there exists an element $1/x\,\in \F$  such that $$x \cdot (1/x) = 1\,.$$
+\end{itemize}
+
+\subsection*{(M)  The distributive law}
+$$x\,(y + z) = xy + xz$$ 
+\begin{itemize}
+\item[] holds for all $x, y, z\,\in \F$. 
+\end{itemize}
+
+\subsection*{1.13 Remarks}
+\begin{itemize}
+\item[] (a) One usually writes (in any field) 
+$$x - y,\,\frac{x}{y},\, x + y + z,\, xyz,\, x^2,\, x^3,\, 2x,\, 3x,\, \ldots$$ in place of
+$$x + (- y),\,x \cdot \frac{1}{y},\, (x + y) + z,\, (xy)z,\, xx,\, xxx,\, x + x,\, x + x + x,\, \ldots .$$
+
+\item[] (b) The field axioms clearly hold in $\Q$, the set of all rational numbers, if addition and multiplication have their customary meaning. Thus $\Q$ is a field. 
+\item[] (c) Although it is not our purpose to study fields (or any other algebraic structures) in detail, it is worthwhile to prove that some familiar properties are consequences of the field axioms; once we do this, we will not need to do it again for the real numbers and for the complex numbers. 
+\end{itemize}
+
+\subsection*{1.14 Proposition}
+\tit{The axioms for addition imply the following statements.}
+\begin{itemize}
+\item[] (a) If $x + y = x + z$ \tit{then} $y = z\,.$   
+\item[] (b) If $x + y = x$ \tit{then} $y = 0\,.$    
+\item[] (c) If $x + y = 0$ \tit{then} $y = -x\,.$    
+\item[] (d) $-(-x) = x\,.$
+\item[] Statement (a) is a cancellation law. Note that (b) asserts the uniqueness of the element whose existence is assumed in (A4), and that (c) does the same for (A5).
+
+\item[] \tbf{Proof } If $x + y = x + z$, the axioms (A) give 
+\begin{align*}
+y = 0 + y &= (- x + x) + y = -x + (x + y) \\
+          &= -x + (x + z) = (-x + x) + z = 0 + z = z\,.
+\end{align*}
+
+\item[] This proves (a). Take $z = 0$ in (a) to obtain (b). Take $z = -x$ in (a) to obtain (c).
+\item[] Since $-x + x =0,\,$ (c) (with $-x$ in place of $x$) gives (d).
+\end{itemize}
+
+\subsection*{1.15 Proposition}
+\tit{The axioms for multiplication imply the following statements.}
+\begin{itemize}
+\item[] (a) If $x \neq 0$ and $xy = xz$ \tit{then} $ y = z\,.$   
+\item[] (b) If $x \neq 0$ and $xy = x$  \tit{then} $ y = 1\,.$   
+\item[] (c) If $x \neq 0$ and $xy = 1$  \tit{then} $ y = 1/x\,.$   
+\item[] (d) If $x \neq 0$ $1/(1/x) = x\,.$   
+\end{itemize}
+
+The proof is so similar to that of Proposition 1.14 that we omit it.  
+
+\subsection*{1.16 Proposition}
+\tit{The field axioms imply the following statements, for any $x, y, z \in \F$.}
+\begin{itemize}
+\item[] (a) $0 x = 0$
+\item[] (b) $x \neq 0$ and $y \neq 0$ \tit{then} $xy \neq 0\,.$
+\item[] (c) $(-x) y = - (xy) = x(-y)\,.$
+\item[] (d) $(-x)(-y) = xy\,.$
+\item[] \tbf{Proof } $0x + 0x = (0 + 0) x = 0x\,.$ Hence 1.14(b) implies that $0x = 0$, and (a) holds. 
+\item[] Next, assume $x \neq 0$, $y \neq 0$, but $xy = 0$. Then (a) gives
+$$ 1 = \left(\frac{1}{y}\right) \left(\frac{1}{x}\right)\, xy = \left(\frac{1}{y}\right) \left(\frac{1}{x}\right)\, 0 = 0\,$$ 
+a contradiction. Thus (b) holds.
+\item[] The first equality in (c) comes from $$(-x)y + xy = (-x +x) y = 0 y = 0\,,$$ combined with 1.14(c); the other half of (c) is proved in the same way. Finally, 
+$$(-x)(-y) = -[x(-y)] = -[-(xy)] = xy$$ by (c) and 1.14(d).
+\end{itemize}
+
+\subsection*{1.17 Definition}
+\tit{An ordered field} is a field $\F$ which is also an \tit{ordered set}, such that
+\begin{itemize}
+\item[] (i) $x + y < x + z$ if $x, y, z \in \F$ and $y < z$,   
+\item[] (ii) $xy > 0$ if $x \in \F$, $y \in \F$, $x > 0$ and $y > 0$. 
+\end{itemize}
+
+If $x > 0$ we call $x$ \tit{positive}; if $x < 0$, $x$ is \tit{negative}.
+
+For example $\Q$ is an ordered field. 
+
+All the familiar rules for working with inequalities apply in every ordered field: Multiplication by positive [negative]
+quantities preserves [reverses] inequalities, no square is negative, etc. The following proposition lists some of these.
+
+\subsection*{1.18 Proposition}
+\tit{The following statements are true in every ordered field.}
+\begin{itemize}
+\item[] (a) \tit{If $x > 0$ then $-x < 0$, and vice versa.}
+\item[] (b) \tit{If $x > 0$ and $y < z$ then $xy < xz$.} 
+\item[] (c) \tit{If $x < 0$ and $y < z$ then $xy > xz$.}
+\item[] (d) \tit{If $x \neq 0$ then $x^2 > 0$. In particular, $1 > 0$.}
+\item[] (e) \tit{If $0 < x < y$ then $0 < 1/y < 1/x$.}
+\item[] \tbf{Proof} 
+\item[] (a) If $x > 0$ then $0 = -x + x > -x + 0$, so that $-x < 0$.\\
+If $x < 0$ then $0 = -x + x < -x + 0$, so that $-x > 0$. This proves (a).   
+\item[] (b) Since $z > y$, we have $z - y > y - y = 0$, hence $x(z - y) > 0$, and therefore 
+$$xz = x (z - y) + xy > 0 + xy = xy\,.$$   
+\item[] (c) By (a), (b) and Proposition 1.16(c),
+$$-[x(z - y)] = (-x)(z - y) > 0\,,$$ so that $x(z - y) < 0$, hence $xz < xy\,.$  
+\item[] (d) If $x > 0$, part (ii) of Definition 1.17 gives $x^2 > 0$. If $x < 0$, then $-x > 0$, hence $(-x)^2 > 0$. 
+But $x^2 = (-x)^2$, by Proposition 1.16(d). Since $1 = 1^2$, $1 > 0$.     
+\item[] (e) If $y > 0$ and $v \leq 0$, then $yv \leq 0$. But $y \cdot (1/y) =1 > 0$. Hence $1/y > 0$. 
+Likewise, $1/x > 0$. If we multiply both sides of the inequality $x < y$ by the positive quantity 
+$(1/x)(1/y)$, we obtain $(1/y) < (1/x)$.     
+\end{itemize}
+
+
 
 \section*{THE REAL FIELD}
 
